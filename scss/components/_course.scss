@@ -1,0 +1,74 @@
+// vista de curso
+
+.course-page {
+	margin-top: 50px;
+}
+
+.course-header {
+	position: relative;
+	margin-bottom: 3em;
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: rem(40px);
+		background: rgba(#000, .5);
+		display: block;
+		position: absolute;
+
+		// todo: para ubicarlo en el bottom del poster
+		bottom: 55px;
+	}
+
+	&__teacher {
+		padding: 0 $gutter;
+		margin-top: -50px;
+		display: flex;
+		height: rem(100px);
+		position: relative;
+		z-index: 500;
+
+		&__img {
+			width: rem(100px);
+			border-radius: 50%;
+			box-shadow: 0 0 0 2px color(gris-claro);
+		}
+
+		&__data {
+			display: flex;
+			flex-direction: column;
+			padding-left: $gutter;
+		}
+
+		&__ask {
+			margin-top: auto;
+			display: table;
+		}
+
+		&__name {
+			font-size: 1.5em;
+			color: color(blanco);
+
+			// para alinear verticalmente
+			margin-top: .4em;
+
+			small {
+				font-size: .7em;
+				display: inline-block;
+				margin-left: .5em;
+				opacity: .5;
+			}
+		}
+	}
+}
+
+.content {
+	padding: 0 $gutter;
+}
+
+.course-content {
+	&__item {
+		padding: .7em 0;
+		border-bottom: 1px solid color(gris-claro);
+	}
+}
